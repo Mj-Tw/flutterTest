@@ -18,17 +18,20 @@ class ChipCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Container(
-        padding: UIHelper.padding(vertical: 5, horizontal: 20),
-        decoration: BoxDecoration(
-          color: isChoosen ? ColorConstant.lightBlue : null,
-          border: Border.all(color: ColorConstant.lightGrey, width: 0.5),
-          borderRadius: UIHelper.borderRadiusCircular(all: 5),
-        ),
-        child: Text(
-          title,
-          style: context.textTheme.bodyMedium?.copyWith(
-            color: isChoosen ? ColorConstant.primary : null,
+      child: Padding(
+        padding: const EdgeInsets.all(4.0),
+        child: Container(
+          padding: UIHelper.padding(vertical: 5, horizontal: 20),
+          decoration: BoxDecoration(
+            color: isChoosen ? ColorConstant.lightBlue : null,
+            border: Border.all(color: ColorConstant.lightGrey, width: 0.5),
+            borderRadius: UIHelper.borderRadiusCircular(all: 5),
+          ),
+          child: Text(
+            title,
+            style: context.textTheme.bodyMedium?.copyWith(
+              color: isChoosen ? ColorConstant.primary : null,
+            ),
           ),
         ),
       ),

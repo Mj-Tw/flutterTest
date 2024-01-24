@@ -96,4 +96,13 @@ class UIHelper {
       fontSize: UIHelper.setSp(14),
     );
   }
+
+  static double mediaWidth(BuildContext context, double multiplier) {
+    return MediaQuery.of(context).size.width * multiplier;
+  }
+
+
+  static double mediaHeight(BuildContext context, double multiplier) {
+    return MediaQuery.of(context).size.height * multiplier;
+  }
 }
